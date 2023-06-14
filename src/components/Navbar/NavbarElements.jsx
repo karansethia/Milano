@@ -34,7 +34,7 @@ export const NavLogo = styled(LinkR)`
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     text-decoration: none;
     font-weight: bold;
 `;
@@ -81,5 +81,35 @@ export const NavLinks = styled(LinkS)`
 
     &.active{
         border: 3px solid #8800ff;
+    }
+`;
+
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`;
+
+export const NavBtnLink = styled(LinkR)`
+    border-radius: 10px;
+    background-color: #8800ff;
+    white-space: nowrap;
+    padding: 10px 20px;
+    color: #efddff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-weight: 520;
+    letter-spacing: 1px;
+    &:hover{
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+        color: #8800ff;
     }
 `;
