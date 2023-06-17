@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { FaArrowRight } from 'react-icons/fa';
+import styled from "styled-components";
+import { MdArrowForwardIos, MdArrowForward } from "react-icons/md";
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
@@ -7,9 +7,23 @@ export const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 850px;
   position: relative;
   z-index: 1;
+
+  &::after{
+    content: '';
+    position: fixed;
+    width: 100%; /* Full width (cover the whole page) */
+  height: 100%;
+  background-color: #00000021;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+  }
 `;
 
 export const HeroBg = styled.div`
@@ -29,14 +43,59 @@ export const VideoBg = styled.video`
   object-fit: cover;
   -o-object-fit: cover;
   background: #232a34;
+  
 `;
 
-export const HeroContent = styled.div``;
+export const HeroContent = styled.div`
+  z-index: 20;
+  max-width: 1200px;
+  position: absolute;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-export const HeroH1 = styled.h1``;
+export const HeroH1 = styled.h1`
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
 
-export const HeroP = styled.p``;
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 32px;
+  }
+`;
 
-export const HeroBtnWrapper = styled.div``;
+export const HeroP = styled.p`
+  margin-top: 24px;
+  color: #e4e4e4;
+  font-size: 24px;
+  text-align: center;
+  max-width: 600px;
 
-export const ArrowForward = styled(FaArrowRight)
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
+`;
+
+export const HeroBtnWrapper = styled.div`
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ArrowForward = styled(MdArrowForwardIos)`
+  margin-left: 18px;
+  font-size: 24px;
+`;
+export const ArrowRight = styled(MdArrowForward)`
+  margin-left: 36px;
+  font-size: 24px;
+`;
