@@ -1,20 +1,20 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#10606')};
+  background-color: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
   
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 `;
 
 export const InfoWrapper = styled.div`
   display: grid;
-  z-index: 1;
-  height: 860px;
+  z-index: -1;
+  height: 750px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
   justify-content: center;
@@ -24,10 +24,10 @@ export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  grid-template-areas: ${({ imgStart }) => (imgStart ? "'col2 coll'" : "'coll col2'")};
+  grid-template-areas: ${({ imgStart }) => (imgStart ? "'col2 col1'" : "'col1 col2'")};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) => (imgStart ? "'coll' 'col2'" : "'coll coll' 'col2 col2'")};
+    grid-template-areas: ${({ imgStart }) => (imgStart ? "'col1' 'col2'" : "'col1 col1' 'col2 col2'")};
   }
   `;
 
@@ -80,7 +80,11 @@ export const Subtitle = styled.p`
 
 export const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+    justify-content: end;
+  }
 `;
 
 export const ImgWrap = styled.div`
@@ -91,5 +95,6 @@ export const ImgWrap = styled.div`
 export const Img = styled.img`
   width: 100%;
   margin: 0 10px 0;
-  padding-right: 0;
+  padding: 20px;
+  padding-right: -30px;
 `;

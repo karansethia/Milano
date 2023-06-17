@@ -13,10 +13,10 @@ export const HeroContainer = styled.div`
 
   &::after{
     content: '';
-    position: fixed;
+    position: absolute;
     width: 100%; /* Full width (cover the whole page) */
-  height: 100%;
-  background-color: #00000021;
+  height: 850px;
+  background-color: #0000007a;
     top: 0;
     bottom: 0;
     right: 0;

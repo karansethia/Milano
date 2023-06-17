@@ -25,7 +25,7 @@ const Hero = () => {
           Sign up for new account today and recieve exciting rewards
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true">
+          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} prim="true" dark="true">
             Get Started {hover ? <ArrowRight /> : <ArrowForward />}
           </Button>
         </HeroBtnWrapper>

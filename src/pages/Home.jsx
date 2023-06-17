@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
 import Hero from '../components/Hero/Hero'
 import Info from '../components/Info/Info'
+import { homeObjOne, homeObjThree, homeObjTwo } from '../components/Info/data'
 
 const Home = () => {
 
@@ -17,7 +18,9 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggleHandler} />
       <Navbar toggle={toggleHandler} />
       <Hero />
-      <Info />
+      <Info {...homeObjOne} />
+      <Info {...homeObjTwo} />
+      <Info {...homeObjThree} />
     </React.Fragment>
   )
 }
