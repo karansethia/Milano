@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
 import Hero from '../components/Hero/Hero'
 import Info from '../components/Info/Info'
+import Services from '../components/Services/Services'
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/Info/data'
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <Hero />
       <Info {...homeObjOne} />
       <Info {...homeObjTwo} />
+      <Services />
       <Info {...homeObjThree} />
     </React.Fragment>
   )
