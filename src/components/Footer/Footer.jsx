@@ -54,7 +54,7 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/' onClick={toggleHome}>
+            <SocialLogo to='/Milano' onClick={toggleHome}>
               Milano
             </SocialLogo>
             <WebsiteRights>
