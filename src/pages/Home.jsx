@@ -5,6 +5,7 @@ import Hero from '../components/Hero/Hero'
 import Info from '../components/Info/Info'
 import Services from '../components/Services/Services'
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/Info/data'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const Home = () => {
       <Info {...homeObjTwo} />
       <Services />
       <Info {...homeObjThree} />
+      <Footer />
     </React.Fragment>
   )
 }
